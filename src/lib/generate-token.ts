@@ -17,7 +17,7 @@ export const generateToken = (userId: mongoose.Types.ObjectId, res: Response) =>
         sameSite: isProduction ? "none" : "lax",
         maxAge: 60 * 60 * 1000, // 1 hour
         path: "/",
-        domain: isProduction ? "domain" : "localhost",
+        domain: isProduction ? "chatty-api-ksyc.onrender.com" : "localhost",
     });
 
     return token;

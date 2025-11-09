@@ -10,7 +10,7 @@ import cors from "cors";
 dotenv.config();
 
 const CORS_ORIGINS = {
-  production: "",
+  production: "https://chatty-app-chi.vercel.app",
   development: "http://localhost:5173"
 };
 
