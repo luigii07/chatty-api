@@ -85,7 +85,7 @@ export const updateProfile = async (req: Request, res: Response) => {
         userId,
         { avatar: secureURL },
         { new: true },
-    );
+    ).select("-password -updatedAt -__v");
 
     return res.status(201).json(updatedUser);
 };

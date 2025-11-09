@@ -1,0 +1,320 @@
+type: collection.insomnia.rest/5.0
+name: Chatty
+meta:
+  id: wrk_b52a9b4bb287466089c6148653046916
+  created: 1762262716810
+  modified: 1762262716810
+  description: ""
+collection:
+  - name: Auth
+    meta:
+      id: fld_a53b5de486d342ce825c187c39648356
+      created: 1762262784320
+      modified: 1762262811196
+      sortKey: -1762262784320
+      description: ""
+    children:
+      - url: "{{ _.BASE_URL }}/{{ _.RESOURCE }}/signup"
+        name: Sign Up
+        meta:
+          id: req_de8e485d79ca40aba85ebb2defea8b07
+          created: 1762262787852
+          modified: 1762710827131
+          isPrivate: false
+          description: ""
+          sortKey: -1762262787852
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"fullName": "Junior Due",
+            	"email": "junior@email.com",
+            	"password": "123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.BASE_URL }}/{{ _.RESOURCE }}/login"
+        name: Login
+        meta:
+          id: req_9fefe16fd85c42b794f104c636ae6e15
+          created: 1762266594682
+          modified: 1762448724775
+          isPrivate: false
+          description: ""
+          sortKey: -1762188811709.625
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "jane@email.com",
+            	"password": "123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.BASE_URL }}/{{ _.RESOURCE }}/logout"
+        name: Logout
+        meta:
+          id: req_cc32569d387949c7896046b2752802bc
+          created: 1762267847201
+          modified: 1762287534701
+          isPrivate: false
+          description: ""
+          sortKey: -1761818930997.75
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.BASE_URL }}/{{ _.RESOURCE }}/check"
+        name: Check Auth
+        meta:
+          id: req_204f91d05e53442bb90c66b7946ab66a
+          created: 1762273545884
+          modified: 1762448722112
+          isPrivate: false
+          description: ""
+          sortKey: -1762114835567.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.BASE_URL }}/{{ _.RESOURCE }}/update-profile"
+        name: Update Avatar
+        meta:
+          id: req_3b50d3ca7c564cce82afa9da60ccfd6f
+          created: 1762448630003
+          modified: 1762605797721
+          isPrivate: false
+          description: ""
+          sortKey: -1761892907140.125
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAB7HRFWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMACklQVEMgcHJvZmlsZQogICAgIDIyMAozODQyNDk0ZDA0MDQwMDAwMDAwMDAwY2YxYzAyMDUwMDA5NDE3NjYxNzQ2MTYxNjE3MjczMWMwMjUwMDAwZDUwNjE2MjZjNmYKMjA1Mzc0NjE2ZTZjNjU3OTFjMDI2ZTAwMGQ1MDYxNjI2YzZmMjA1Mzc0NjE2ZTZjNjU3OTFjMDI3NDAwOTE1MjY1NmQ2OTc4CjIwNmY2NjIwODQ0MTc2NjE3NDYxNjE2MTcyNzM5NDIwMjg2ODc0NzQ3MDczM2EyZjJmNjE3NjYxNzQ2MTYxNjE3MjczMmU2Mwo2ZjZkMmYyOTIwNjI3OTIwODQ1MDYxNjI2YzZmMjA1Mzc0NjE2ZTZjNjU3OTk0MmMyMDZjNjk2MzY1NmU3MzY1NjQyMDc1NmUKNjQ2NTcyMjA4NDQ2NzI2NTY1MjA2NjZmNzIyMDcwNjU3MjczNmY2ZTYxNmMyMDYxNmU2NDIwNjM2ZjZkNmQ2NTcyNjM2OTYxCjZjMjA3NTczNjUyZTk0MjAyODY4NzQ3NDcwNzMzYTJmMmY2MTc2NjE3NDYxNjE2MTcyNzMyZTYzNmY2ZDJmMjkxYzAyMDAwMAowMjAwMDQwMAo2oSHdAAAFnGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLycgeDp4bXB0az0nSW1hZ2U6OkV4aWZUb29sIDEzLjMwJz4KPHJkZjpSREYgeG1sbnM6cmRmPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjJz4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOmRjPSdodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyc+CiAgPGRjOmNyZWF0b3I+CiAgIDxyZGY6U2VxPgogICAgPHJkZjpsaT5QYWJsbyBTdGFubGV5PC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L2RjOmNyZWF0b3I+CiAgPGRjOnJpZ2h0cz4KICAgPHJkZjpBbHQ+CiAgICA8cmRmOmxpIHhtbDpsYW5nPSd4LWRlZmF1bHQnPlJlbWl4IG9mIOKAnkF2YXRhYWFyc+KAnSAoaHR0cHM6Ly9hdmF0YWFhcnMuY29tLykgYnkg4oCeUGFibG8gU3RhbmxleeKAnSwgbGljZW5zZWQgdW5kZXIg4oCeRnJlZSBmb3IgcGVyc29uYWwgYW5kIGNvbW1lcmNpYWwgdXNlLuKAnSAoaHR0cHM6Ly9hdmF0YWFhcnMuY29tLyk8L3JkZjpsaT4KICAgPC9yZGY6QWx0PgogIDwvZGM6cmlnaHRzPgogIDxkYzp0aXRsZT4KICAgPHJkZjpBbHQ+CiAgICA8cmRmOmxpIHhtbDpsYW5nPSd4LWRlZmF1bHQnPkF2YXRhYWFyczwvcmRmOmxpPgogICA8L3JkZjpBbHQ+CiAgPC9kYzp0aXRsZT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6cGhvdG9zaG9wPSdodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvJz4KICA8cGhvdG9zaG9wOkNyZWRpdD5QYWJsbyBTdGFubGV5PC9waG90b3Nob3A6Q3JlZGl0PgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpwbHVzPSdodHRwOi8vbnMudXNlcGx1cy5vcmcvbGRmL3htcC8xLjAvJz4KICA8cGx1czpMaWNlbnNvcj4KICAgPHJkZjpTZXE+CiAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9J1Jlc291cmNlJz4KICAgICA8cGx1czpMaWNlbnNvclVSTD5odHRwczovL2F2YXRhYWFycy5jb20vPC9wbHVzOkxpY2Vuc29yVVJMPgogICAgPC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L3BsdXM6TGljZW5zb3I+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnhtcFJp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"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      RESOURCE: auth
+    environmentPropertyOrder:
+      "&":
+        - RESOURCE
+  - name: Users
+    meta:
+      id: fld_a36452e123764683aed811941f05d6a5
+      created: 1762271038814
+      modified: 1762274419303
+      sortKey: -1762271038814
+      description: ""
+    children:
+      - url: "{{ _.BASE_URL }}/{{ _.RESOURCE }}"
+        name: Get Users For Sidebar
+        meta:
+          id: req_3ac0e64c2ca14cd29f475f101b0be419
+          created: 1762271041853
+          modified: 1762285402494
+          isPrivate: false
+          description: ""
+          sortKey: -1762271041853
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      RESOURCE: users
+    environmentPropertyOrder:
+      "&":
+        - RESOURCE
+  - name: Messages
+    meta:
+      id: fld_0c86b102dfd949b98ac7d565698c36a7
+      created: 1762274616088
+      modified: 1762274638025
+      sortKey: -1762274616088
+      description: ""
+    children:
+      - url: "{{ _.BASE_URL }}/{{ _.RESOURCE }}/send/690a0d0998e7c4e0417727a1"
+        name: Send Message
+        meta:
+          id: req_fe782a01f3fb426cb454d822521662be
+          created: 1762274618980
+          modified: 1762288489382
+          isPrivate: false
+          description: ""
+          sortKey: -1762274618980
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAB7HRFWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMACklQVEMgcHJvZmlsZQogICAgIDIyMAozODQyNDk0ZDA0MDQwMDAwMDAwMDAwY2YxYzAyMDUwMDA5NDE3NjYxNzQ2MTYxNjE3MjczMWMwMjUwMDAwZDUwNjE2MjZjNmYKMjA1Mzc0NjE2ZTZjNjU3OTFjMDI2ZTAwMGQ1MDYxNjI2YzZmMjA1Mzc0NjE2ZTZjNjU3OTFjMDI3NDAwOTE1MjY1NmQ2OTc4CjIwNmY2NjIwODQ0MTc2NjE3NDYxNjE2MTcyNzM5NDIwMjg2ODc0NzQ3MDczM2EyZjJmNjE3NjYxNzQ2MTYxNjE3MjczMmU2Mwo2ZjZkMmYyOTIwNjI3OTIwODQ1MDYxNjI2YzZmMjA1Mzc0NjE2ZTZjNjU3OTk0MmMyMDZjNjk2MzY1NmU3MzY1NjQyMDc1NmUKNjQ2NTcyMjA4NDQ2NzI2NTY1MjA2NjZmNzIyMDcwNjU3MjczNmY2ZTYxNmMyMDYxNmU2NDIwNjM2ZjZkNmQ2NTcyNjM2OTYxCjZjMjA3NTczNjUyZTk0MjAyODY4NzQ3NDcwNzMzYTJmMmY2MTc2NjE3NDYxNjE2MTcyNzMyZTYzNmY2ZDJmMjkxYzAyMDAwMAowMjAwMDQwMAo2oSHdAAAFnGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLycgeDp4bXB0az0nSW1hZ2U6OkV4aWZUb29sIDEzLjMwJz4KPHJkZjpSREYgeG1sbnM6cmRmPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjJz4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOmRjPSdodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyc+CiAgPGRjOmNyZWF0b3I+CiAgIDxyZGY6U2VxPgogICAgPHJkZjpsaT5QYWJsbyBTdGFubGV5PC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L2RjOmNyZWF0b3I+CiAgPGRjOnJpZ2h0cz4KICAgPHJkZjpBbHQ+CiAgICA8cmRmOmxpIHhtbDpsYW5nPSd4LWRlZmF1bHQnPlJlbWl4IG9mIOKAnkF2YXRhYWFyc+KAnSAoaHR0cHM6Ly9hdmF0YWFhcnMuY29tLykgYnkg4oCeUGFibG8gU3RhbmxleeKAnSwgbGljZW5zZWQgdW5kZXIg4oCeRnJlZSBmb3IgcGVyc29uYWwgYW5kIGNvbW1lcmNpYWwgdXNlLuKAnSAoaHR0cHM6Ly9hdmF0YWFhcnMuY29tLyk8L3JkZjpsaT4KICAgPC9yZGY6QWx0PgogIDwvZGM6cmlnaHRzPgogIDxkYzp0aXRsZT4KICAgPHJkZjpBbHQ+CiAgICA8cmRmOmxpIHhtbDpsYW5nPSd4LWRlZmF1bHQnPkF2YXRhYWFyczwvcmRmOmxpPgogICA8L3JkZjpBbHQ+CiAgPC9kYzp0aXRsZT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6cGhvdG9zaG9wPSdodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvJz4KICA8cGhvdG9zaG9wOkNyZWRpdD5QYWJsbyBTdGFubGV5PC9waG90b3Nob3A6Q3JlZGl0PgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpwbHVzPSdodHRwOi8vbnMudXNlcGx1cy5vcmcvbGRmL3htcC8xLjAvJz4KICA8cGx1czpMaWNlbnNvcj4KICAgPHJkZjpTZXE+CiAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9J1Jlc291cmNlJz4KICAgICA8cGx1czpMaWNlbnNvclVSTD5odHRwczovL2F2YXRhYWFycy5jb20vPC9wbHVzOkxpY2Vuc29yVVJMPgogICAgPC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L3BsdXM6TGljZW5zb3I+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnhtcFJp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"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.BASE_URL }}/{{ _.RESOURCE }}/690a0d0998e7c4e0417727a1"
+        name: Get Messages
+        meta:
+          id: req_bf022bfc384a4e2895719bd2d44e69f9
+          created: 1762287757788
+          modified: 1762288248541
+          isPrivate: false
+          description: ""
+          sortKey: -1762287757788
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      RESOURCE: messages
+    environmentPropertyOrder:
+      "&":
+        - RESOURCE
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_9328a171a1427d3deca55985e906ec858c42dfa2
+    created: 1762262716812
+    modified: 1762713427184
+  cookies:
+    - key: token
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjI3MTM0MjcsImV4cCI6MTc2MjcxNzAyNywic3ViIjoiNjkwYTExMThkZTcwOTJlN2U2YjA4ZTI1In0.O_lz42-gYGGhX2tHihGSEt0OMgu3W605BgjWDP0888g
+      maxAge: 3600
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: false
+      creation: 2025-11-04T14:26:17.748Z
+      lastAccessed: 2025-11-09T18:37:07.183Z
+      sameSite: lax
+      id: 4a3a0e13-08ab-49aa-967f-96330dfb7638
+    - key: token
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjI2MjE1NDAsImV4cCI6MTc2MjYyNTE0MCwic3ViIjoiNjkwYTExMThkZTcwOTJlN2U2YjA4ZTI1In0.z9iJ4zdxelFA3OooNcfQzaUB2xzLeSxnNCivUTcsTBA
+      maxAge: 3600
+      domain: chatty-api-ttcn.onrender.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-11-08T14:29:56.803Z
+      lastAccessed: 2025-11-08T17:05:46.808Z
+      sameSite: strict
+      id: b701282e-9043-4300-9fd7-21cbb821d142
+    - key: token
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjI3MTExNjcsImV4cCI6MTc2MjcxNDc2Nywic3ViIjoiNjkwYTExMThkZTcwOTJlN2U2YjA4ZTI1In0.qqnFNLF5LZrHWHNQM8et1LDArgtqvpaZttQ4VkFfJiI
+      maxAge: 3600
+      domain: chatty-api-ksyc.onrender.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: false
+      creation: 2025-11-09T12:04:04.304Z
+      lastAccessed: 2025-11-09T17:59:33.254Z
+      sameSite: none
+      id: da1989c3-5e65-44ef-8362-00b15e0e134a
+environments:
+  name: Base Environment
+  meta:
+    id: env_9328a171a1427d3deca55985e906ec858c42dfa2
+    created: 1762262716811
+    modified: 1762262716811
+    isPrivate: false
+  subEnvironments:
+    - name: dev
+      meta:
+        id: env_a33ae9d129014265aa88fb05e4e1f842
+        created: 1762262726905
+        modified: 1762448609100
+        isPrivate: false
+        sortKey: 1762262726905
+      data:
+        BASE_URL: http://localhost:3333
+      color: "#c8ff52"
+    - name: production
+      meta:
+        id: env_5e0996d049f34129b7745dd300e4c17f
+        created: 1762612144753
+        modified: 1762688727303
+        isPrivate: false
+        sortKey: 1762612144753
+      data:
+        BASE_URL: https://chatty-api-ksyc.onrender.com
+      color: "#8b3dff"
